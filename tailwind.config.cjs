@@ -1,7 +1,20 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '430px',
+      },
+      gridTemplateRows: {
+        // Simple 8 row grid
+        '8': 'repeat(8, minmax(0, 1fr))',
+      },
+      fontFamily: {
+        'title': ['WorkSans', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'GentiumPlus';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Gentium_Plus/GentiumPlus-Regular.ttf);
+}
+@font-face {
+  font-family: 'GentiumPlus';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/Gentium_Plus/GentiumPlus-Italic.ttf);
+}
+@font-face {
+  font-family: 'GentiumPlus';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Gentium_Plus/GentiumPlus-Bold.ttf);
+}
+@font-face {
+  font-family: 'GentiumPlus';
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/Gentium_Plus/GentiumPlus-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Work_Sans/static/WorkSans-Medium.ttf);
+}
+
+@layer base {
+  html {
+    font-family: GentiumPlus;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
