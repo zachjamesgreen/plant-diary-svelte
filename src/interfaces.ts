@@ -42,8 +42,8 @@ export class Post {
   slug: string;
   title: string;
   url: string;
-  _published: any;
-  _update_at: any
+  _published: DateTime;
+  _update_at: DateTime
 
   constructor(post: IPost) {
     this.cover_image = post.cover_image;
@@ -60,7 +60,9 @@ export class Post {
   }
 
   set published(value: string) {
-    this._published = DateTime.fromISO(value);
+    if (value) {
+      this._published = DateTime.fromISO(value);
+    } else { this._published = null; }
   }
 
   get updated_at() {
@@ -68,7 +70,9 @@ export class Post {
   }
 
   set updated_at(value: string) {
-    this._update_at = DateTime.fromISO(value);
+    if (value) {
+      this._update_at = DateTime.fromISO(value);
+    } else { this._update_at = null; }
   }
 
   async getPostBody() {

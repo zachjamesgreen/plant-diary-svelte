@@ -4,10 +4,10 @@
   export async function load({ params, fetch}) {
     // let url = `https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-228d11dd-0a8c-4418-99f7-a3d2a95cfb7f/plant_diary/getPost?slug=${params.slug}`
     let url = `https://starfish-app-8iujy.ondigitalocean.app/plant_diary/getPost?slug=${params.slug}`
+    let p = await fetch(url).then((res: Response) => res.json()).then((data: any) => new Post(data))
     return {
       props: {
-        slug: params.slug,
-        post: await fetch(url).then((res: Response) => res.json()).then((data: any) => new Post(data))
+        post: p
       },
     }
   }
