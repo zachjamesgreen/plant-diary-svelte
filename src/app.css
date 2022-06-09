@@ -1,6 +1,9 @@
+@import "../node_modules/highlight.js/styles/default.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @font-face {
   font-family: 'GentiumPlus';
@@ -32,6 +35,12 @@
   font-style: normal;
   font-weight: 500;
   src: url(../fonts/Work_Sans/static/WorkSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Comic Mono';
+  font-style: normal;
+  src: url(../fonts/ComicMono.ttf);
 }
 
 @layer base {

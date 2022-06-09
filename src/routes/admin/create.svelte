@@ -50,7 +50,6 @@
 
 <script lang="ts">
   import { Marked } from '@ts-stack/markdown';
-  // const url = 'http://localhost:8080'
   const url = 'https://zjg-plant-diary.herokuapp.com'
   let inlineImage: HTMLInputElement
   let files: FileList
@@ -85,20 +84,16 @@
     })
     .then(res => res.json())
     .then(res => {
-      console.log(res)
-      let u = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-228d11dd-0a8c-4418-99f7-a3d2a95cfb7f/plant_diary/savePost"
-      console.log(`${u}?${new URLSearchParams(res)}`)
-      // fetch(`${u}?${new URLSearchParams(res)}`)
-      // .then(res => console.log(res.json()))
+      let u = "https://starfish-app-8iujy.ondigitalocean.app/plant_diary/savePost"
+      // let u = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-228d11dd-0a8c-4418-99f7-a3d2a95cfb7f/plant_diary/savePost"
+      fetch(`${u}?${new URLSearchParams(res)}`)
+      .then(res => console.log(res.json()))
       
     })
 
   }
 
-  let source = `__strong__
-# Heading
-## h2 heading
-`;
+  let source = "Start here"
 
   function uplaodInlinePhoto() {
     const file = files[0]

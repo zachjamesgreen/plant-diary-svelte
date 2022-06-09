@@ -13,8 +13,11 @@ module.exports = {
       },
       fontFamily: {
         'title': ['WorkSans', ...defaultTheme.fontFamily.sans],
+        'code': ['Comic Mono', ...defaultTheme.fontFamily.mono],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

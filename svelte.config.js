@@ -12,7 +12,10 @@ const config = {
 
 	kit: {
 		adapter: adapter()
-	}
+	},
+	compilerOptions: {
+		dev: true,
+	},
 };
 
 export default config;
